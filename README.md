@@ -19,15 +19,9 @@ Microscopic image-based characterization of mesenchymal stromal cells senescence
 Таким образом, в литературе существует описание ряда моделей успешно применённых к решению проблем идентификации, классификации и оценки функционального состояния МСК или близких к ним по морфологии клеток. 
  
 Таблица 1. Характеристика наиболее интересных работ, связанных с применением сверточных нейронных сетей для сегментирования, детектирования и классификации стволовых клеток по микроскопным снимкам. 
-Название 	Идеи	Модели	Метрики	Оптимизатор	Аугментация 	Loss function	Дополнительно	Результаты
-Lan Y et al. (2022)	Идентификация остеогенной дифференцировки МСК	VGG 16, Inception V3 и ResNet50 с предварительно обученными весами	Accuracy, sensitivity, precision, specificity, F1-score	Adam	+	Cross-entropy	Вычислительные мощности - Intel Core i7-9700F, 32 GB RAM, NVIDIA GeForce RTX 2080Ti.	Accuracy = 83-89%
-Heckenbach et al. (2022)	Предсказание старения фибробластов кожи	U-Net, Xception и InceptionV3	Accuracy	Adam	+	Cross-entropy + Kullback–Leibler divergence	Был использован Flipout. 
-	Accuracy = 95%
-Kim et al. (2022)	Функциональный скрининг МСК	DenseNet121-BO (Bayesian optimization)
-	AUC, F1-scores, accuracies, sensitivities, specificities, positive predictive value (PPV), negative predictive value (NPV)	Adam	NA	NA	Вычислительные мощности - NVIDIA TITAN Xp GPU, Intel®CoreTM i5-8400 x64 CPU 16.0GB RAM CPU.
-Были применены early stopping, L2-регуляризация и dropout	AUC 0.975, acc.0.922, 
-F1 0.922, sensit. 0.905, specif. 09.42, PPV 0.940,
-NPV 09.08
+
+![image](https://user-images.githubusercontent.com/126082195/220635814-a42e4e58-e146-4612-ae06-01162e39f686.png)
+
  
 Список источников:
 M. F. Pittenger et al., “Mesenchymal stem cell perspective: cell biology to clinical progress” NPJ Regener. Med. 4, 22 (2019).
