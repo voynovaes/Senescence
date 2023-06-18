@@ -1,19 +1,15 @@
 # Senescence
 
 # Live microscopic assessment of in multipotent mesenchymal stromal cells senescence 
-Прижизненная оценка сенесцентности культуры клеток – достаточно важная и нетривиальная задача клеточной биологии. Это особенно важно для исследований, связанных с длительным культивированием клеток или их использованием в медицинских приложениях. Большинство хорошо известных биологических методов детекции старения клеток (окрашивание невитальными красителями, ПЦР, вестерн-блоттинг и др.) подразумевают невозможность прижизненного мониторинга. Те же методы, которые принято считать прижизненными, все равно подразумевают воздействие на клетку или даже ее повреждение, что также лишает исследователей возможности впоследствии адекватно оценить свойства отдельной клетки в ходе других экспериментов, так как ее свойства будут нарушены, а жизнеспособность снижена. Таким образом, ни один метод не позволяет отследить дальнейшую судьбу каждой отдельной клетки и может лишь дать нам информацию об общем состоянии популяции. Иными словами, если на отдельной порции клеток провести одно из подобных исследований, то в результате можно будет судить о примерном процентном содержании состарившихся клеток в культуре. Однако увидеть то, как отдельные старые и молодые клетки ведут себя в различных экспериментах, мы не можем. 
-Старение является одной из важнейших современных медико-биологических проблем. Популярным методом изучения механизмов старения являются исследования на культурах клеток in vitro. Например, особое внимание уделяется процессам, происходящим с сенесцентными мультипотентными мезенхимными стромальными клетками (ММСК) — важными регуляторами обновления и поддержания гомеостаза различных тканей. Однако для изучения сенесцентности ММСК в настоящий момент существуют только невитальные методы, то есть те, которые подразумевают гибель или существенное воздействие на клетку; например, фиксация и окрашивание на бета-галактозидазу. В то же время актуальными являются методы прижизненного наблюдения за клетками и изучения их свойств без деструктивного влияния на них, так как такие методы позволяют изучать процессы старения и дальнейшую судьбу одиночных клеток. Возможным решением может стать использование алгоритмов компьютерного зрения, которые набирают все большую популярность для обработки микроскопных изображений. В данной работе мы оценили возможность применения моделей машинного обучения для классификации ММСК на старые и молодые по фазово-контрастным микроскопным изображениям, что позволяет прижизненную оценку сенесцентности как всей популяции, так и отдельных клеток. Для классификации клеток в обучающем датасете была использована окраска на бета-галактозидазу как золотой стандарт определения сенесцентного фенотипа. 
-Основные задачи, которые мы предлагаем решать с помощью полученных моделей, – это оценка старения культуры на уровне популяции, а также идентификация отдельных сенесцентных клеток и дальнейшее наблюдение за ними в прижизненных экспериментах в реальном времени.
 
- 
-Список источников:
-M. F. Pittenger et al., “Mesenchymal stem cell perspective: cell biology to clinical progress” NPJ Regener. Med. 4, 22 (2019).
-Liu J, Ding Y, Liu Z and Liang X (2020) Senescence in Mesenchymal Stem Cells: Functional Alterations, Molecular Mechanisms, and Rejuvenation Strategies. Front. Cell Dev. Biol. 8:258. 
-Zhou X, Hong Y, Zhang H and Li X (2020) Mesenchymal Stem Cell Senescence and Rejuvenation: Current Status and Challenges. Front. Cell Dev. Biol. 8:364. 
-Lan Y, Huang N, Fu Y, Liu K, Zhang H, Li Y and Yang S (2022) Morphology-Based Deep Learning Approach for Predicting Osteogenic Differentiation. Front. Bioeng. Biotechnol. 9:802794. 
-Zhai W. et al. Identification of senescent cells in multipotent mesenchymal stromal cell cultures: Current methods and future directions //Cytotherapy. – 2019. – Т. 21. – №. 8. – С. 803-819.
-Heckenbach, I., Mkrtchyan, G.V., Ezra, M.B. et al. Nuclear morphology is a deep learning biomarker of cellular senescence. Nat Aging 2, 742–755 (2022). 
-Noguchi, Y., Murakami, M., Murata, M. et al. Microscopic image-based classification of adipocyte differentiation by machine learning. Histochem Cell Biol (2022). 
-Kim, G., Jeon, J.H., Park, K. et al. High throughput screening of mesenchymal stem cell lines using deep learning. Sci Rep 12, 17507 (2022). 
-Liu YYF, Lu Y, Oh S, Conduit GJ (2020) Machine learning to predict mesenchymal stem cell efficacy for cartilage repair. PLoS Comput Biol 16(10): e1008275.
+This pipeline can be used for analyzing cell aging in culture. The pretrained models presented here are designed to work with phase-contrast images of mesenchymal multipotent stromal cells (MSCs). However, you can obtain models that work effectively with other cell types using the same approach.
 
+# Basic usage
+
+First and foremost, you need to use an instance segmentation model to obtain cell masks. We recommend using the LC models from the Cellpose model zoo. The LC4 model performs the best, but please note that it requires significant computational resources. To download our pretrained model for MSC, use the following code:
+
+```python
+
+```
+
+To create your own file for cell annotation, you can refer to the code of CustomImageDataset, which allows you to automatically annotate your cells. For class-based annotation, you will need images of cell staining in the form of a binary layer. You can use beta-galactosidase staining, as we did in our case, or choose your own aging marker.
