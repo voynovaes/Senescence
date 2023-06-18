@@ -12,4 +12,5 @@ First and foremost, you need to use an instance segmentation model to obtain cel
 
 ```
 
-To create your own file for cell annotation, you can refer to the code of CustomImageDataset, which allows you to automatically annotate your cells. For class-based annotation, you will need images of cell staining in the form of a binary layer. You can use beta-galactosidase staining, as we did in our case, or choose your own aging marker.
+To create your own file for cell annotation, you can refer to the code of CellAnnotation, which allows you to automatically annotate your cells. For class-based annotation, you will need images of cell staining in the form of a binary layer. You can use beta-galactosidase staining, as we did in our case, or choose your own aging marker.
+
