@@ -1,4 +1,4 @@
-# Live microscopic assessment of in multipotent mesenchymal stromal cells senescence 
+# Live microscopic assessment of multipotent mesenchymal stromal cells senescence 
 
 This pipeline can be used for analyzing cell aging in culture. The pretrained models presented here are designed to work with phase-contrast images of mesenchymal multipotent stromal cells (MSCs). However, you can obtain models that work effectively with other cell types using the same approach.
 
