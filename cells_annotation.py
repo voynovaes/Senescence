@@ -15,7 +15,7 @@ for colored_image, masks, file_name in zip(colored_images, all_masks[0], file_na
   mask_name = masks
   masks = np.load(masks)
   colored_image = np.array(colored_image)
-  colored_image = colored_image//65535
+  colored_image = colored_image//65535 #65535 for 16-bit image, 255 for 8-bit image, etc.
   colored_image = colored_image.astype('float64')
   for mask_num in range(1, np.unique(masks).shape[0]):
     annotation_file['File'].append(file_name.split('\\')[1])
