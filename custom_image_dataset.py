@@ -33,7 +33,7 @@ class CustomImageDataset(Dataset):
 
         image =  Image.open(img_path)
         image = np.array(image)/65535
-        image = (image - mean_train)/std_train
+        image = (image - mean_train)/std_train #normalize your images using mean and std for train dataset
         image_torch = torch.from_numpy(image)
         image_torch = image_torch.unsqueeze(0)
 
@@ -56,7 +56,7 @@ class CustomImageDataset(Dataset):
         box_size_x = int(-boxes[0][0])+int(boxes[0][2])
         box_size_y = int(-boxes[0][1])+int(boxes[0][3])
 
-        x_size, y_size = 380, 380
+        x_size, y_size = 380, 380 #image size
 
         if box_size_x>x_size:
             box_cell = box_cell[:, box_size_x//2 - x_size//2: box_size_x//2+(x_size-x_size//2)]
