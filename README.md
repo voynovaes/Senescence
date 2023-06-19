@@ -28,5 +28,5 @@ Please note that if your cells significantly differ in size or morphology from M
 Linux, Windows and Mac OS are supported for running the code. At least 8GB of RAM is required. 16GB-32GB may be required for larger images. For working with cell image classification, we recommend using a GPU with a minimum of 8 GB of memory size.
 
 # Useful links 
-[Cellpose](https://github.com/MouseLand/cellpose)
-[Our dataset:](https://disk.yandex.com/d/L_aZdBoNdCh5eQ)
+* [Cellpose](https://github.com/MouseLand/cellpose)
+* [Our dataset:](https://disk.yandex.com/d/L_aZdBoNdCh5eQ)
