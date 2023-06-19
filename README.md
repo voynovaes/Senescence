@@ -17,6 +17,9 @@ And finally, to perform the classification of your cells, you can load our [pret
 
 Please note that if your cells significantly differ in size or morphology from MSC, the model may perform slightly worse. In such cases, you will likely need to fine-tune the model on your own data.
 
+## Data evaluation
+You can evaluate model using **efficient_netb4_evaluation** code. 
+
 # System requirements
 Linux, Windows and Mac OS are supported for running the code. At least 8GB of RAM is required. 16GB-32GB may be required for larger images. For working with cell image classification, we recommend using a GPU with a minimum of 8 GB of memory size.
 
