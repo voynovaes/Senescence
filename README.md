@@ -8,7 +8,7 @@ First and foremost, you need to use an instance segmentation model to obtain cel
 
 ## Creating cells annotation file
 To create your own file for cell annotation, you can refer to the code of **cells_annotation**, which allows you to automatically annotate your cells. For class-based annotation, you will need images of cell staining in the form of a binary layer. You can use beta-galactosidase staining, as we did in our case, or choose your own aging marker. 
-
+ 
 **Important point.** Be careful when converting the staining image to a binary layer. It is crucial to ensure that the cell positions on the phase-contrast and staining images align correctly; otherwise, the annotation will be inaccurate. If you notice any misalignment during data analysis, consider aligning the paired images. It is possible that images from different cameras may not align perfectly. As an alternative, we suggest following the approach we took. We used the same monochrome camera and applied a red filter to obtain the staining images. To remove unwanted background signals, we also captured the original image using a color camera and adjusted the signal threshold to retain only the regions with actual staining. When choosing the threshold, it is essential to analyze multiple fields of view and cell types. This will help you find the optimal solution. Additionally, we recommend applying a size threshold to the staining spots, which can help address potential false-positive signals.
 
 
