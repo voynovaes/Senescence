@@ -19,12 +19,12 @@ To create your own file for cell annotation, you can refer to the code of **cell
 Next, you need to create the **custom_image_dataset** class, which will generate images of individual cells with the specified size. To do this, use the corresponding code. Don't forget to calculate the mean and std values for the training dataset as they are required for normalizing the resulting images. It is also important to choose the optimal cell image size, which should be specified in the dataset creation code. Afterward, you will be able to create instances of the **train_set** and **test_set** classes, which inherit from the **custom_image_dataset** class. 
 
 ## Cell senescence classification model
-And finally, to perform the classification of your cells, you can download our [pretrained EfficientNet-B4 model](https://disk.yandex.com/d/SJd014Ct1htPlQ) for MSCs.
+And finally, to perform the classification of your cells, you can download our [pretrained EfficientNet-B6 model](https://disk.yandex.ru/d/hhs_HskMeTn2zQ) for MSCs.
 
 Please note that if your cells significantly differ in size or morphology from MSCs, the model may perform slightly worse. In such cases, you will likely need to fine-tune the model on your own data.
 
 ## Data evaluation
-You can evaluate the model using **efficient_netb4_evaluation** code. 
+You can evaluate the model using **efficient_netb6_evaluation** code. 
 
 # System requirements
 Linux, Windows, and Mac OS are supported for running the code. At least 8GB of RAM is required. 16GB-32GB may be required for larger images. For working with cell image classification, we recommend using a GPU with a minimum of 8 GB of memory size.
