@@ -12,7 +12,7 @@ image_size = 490 #you can add here your size of cell images
 import efficientnet_pytorch
 from efficientnet_pytorch import EfficientNet
 model_name = 'efficientnet-b6'
-model = EfficientNet.from_pretrained(model_name, num_classes=1)
+model = EfficientNet.from_pretrained(model_name, num_classes=1) 
 
 # If the model input is a single-band image, you must use the following code
 from efficientnet_pytorch.utils import Conv2dStaticSamePadding
