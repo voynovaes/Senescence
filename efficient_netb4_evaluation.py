@@ -7,16 +7,16 @@ Original file is located at
     https://colab.research.google.com/drive/1gFUpUDTd-vjUKw-fUHxMUEDh0uN7mg1x
 """
 
-image_size = 380 #you can add here your size of cell images
+image_size = 490 #you can add here your size of cell images
 
 import efficientnet_pytorch
 from efficientnet_pytorch import EfficientNet
-model_name = 'efficientnet-b4'
+model_name = 'efficientnet-b6'
 model = EfficientNet.from_pretrained(model_name, num_classes=1)
 
 # If the model input is a single-band image, you must use the following code
 from efficientnet_pytorch.utils import Conv2dStaticSamePadding
-model._conv_stem = Conv2dStaticSamePadding(1, 48, kernel_size=(3, 3), stride=(2, 2), image_size = image_size, bias=False)
+model._conv_stem = Conv2dStaticSamePadding(1, 56, kernel_size=(3, 3), stride=(2, 2), image_size = image_size, bias=False)
 
 # Here you need to add path to efficientnetb4_state_dict
 model.load_state_dict(torch.load("path_to_model_state_dict"))
