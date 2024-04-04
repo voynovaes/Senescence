@@ -18,7 +18,7 @@ model = EfficientNet.from_pretrained(model_name, num_classes=1)
 from efficientnet_pytorch.utils import Conv2dStaticSamePadding
 model._conv_stem = Conv2dStaticSamePadding(1, 56, kernel_size=(3, 3), stride=(2, 2), image_size = image_size, bias=False)
 
-# Here you need to add path to efficientnetb4_state_dict
+# Here you need to add path to efficientnetb6_state_dict
 model.load_state_dict(torch.load("path_to_model_state_dict"))
 model = model.to(device)
 
