@@ -32,4 +32,4 @@ Linux, Windows, and Mac OS are supported for running the code. At least 8GB of R
 # Useful links 
 * [Cellpose](https://github.com/MouseLand/cellpose)
 * [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch)
-* [Our dataset](https://disk.yandex.com/d/L_aZdBoNdCh5eQ)
+* [Our dataset](https://disk.yandex.ru/d/2MTM979NveB8tg)
